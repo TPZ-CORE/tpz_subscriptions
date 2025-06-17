@@ -11,7 +11,7 @@ Config.Commands = {
 
         Suggestion = "Execute this command to add a the selected user as a new subscription.",
 
-        PermittedDiscordRoles  = { 670899926783361024, 709868210366840835 },
+        PermittedDiscordRoles  = { 11111111111111111, 2222222222222222 },
         PermittedGroups = { 'admin' },
 
         Command = 'addsubscription',
@@ -22,7 +22,7 @@ Config.Commands = {
 
         Suggestion = "Execute this command to extend of the selected user the subscription expiration duration.",
 
-        PermittedDiscordRoles  = { 670899926783361024, 709868210366840835 },
+        PermittedDiscordRoles  = { 11111111111111111, 2222222222222222 },
         PermittedGroups = { 'admin' },
 
         Command = 'extendsubscription',
@@ -33,7 +33,7 @@ Config.Commands = {
 
         Suggestion = "Execute this command to set of the selected user the subscription expiration duration.",
 
-        PermittedDiscordRoles  = { 670899926783361024, 709868210366840835 },
+        PermittedDiscordRoles  = { 11111111111111111, 2222222222222222 },
         PermittedGroups = { 'admin' },
 
         Command = 'setsubscription',
@@ -44,7 +44,7 @@ Config.Commands = {
 
         Suggestion = "Execute this command to check of the selected user the subscription expiration duration.",
 
-        PermittedDiscordRoles  = { 670899926783361024, 709868210366840835 },
+        PermittedDiscordRoles  = { 11111111111111111, 2222222222222222 },
         PermittedGroups = { 'admin' },
 
         Command = 'checksubscription',
@@ -62,7 +62,7 @@ Config.Webhooks = {
 
     ['COMMANDS'] = {
         Enabled = false,
-        Url     = '',
+        Url     = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
         Color   = 10038562,
     },
 
