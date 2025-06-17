@@ -7,6 +7,7 @@ Locales = {
   ['CONSOLE_USER_JOIN_ATTEMPT']                   = '^1A user with the identifier (%s) attempted to join while not having any subscription active.^0',
   ['CONSOLE_USER_EXPIRED_JOIN_ATTEMPT']           = "^1A user with the identifier (%s) attempted to join while the user's subscription has been expired.^0",
   ['SUBSCRIPTION_EXPIRED']                        = 'Your subscription has been expired, contact us if you want to join us again.',
+  ['SUBSCRIPTION_VALID_UNTIL']                    = "Your subscription is valid until: %s",
 
   ['NO_PERMISSIONS']                              = "~e~You have insufficient permissions.",
   ['INVALID_STEAM_INPUT_GAME']                    = "~e~Invalid Steam Hex!",
