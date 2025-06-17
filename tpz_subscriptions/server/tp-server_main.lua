@@ -1,6 +1,3 @@
-local TPZ = exports.tpz_core:getCoreAPI()
-
-local TIMEOUT = 60 -- 1 minute as default for timeout if something goes wrong.
 
 -----------------------------------------------------------
 --[[ Local Functions ]]--
