@@ -2,7 +2,7 @@
 Locales = {}
 
 Locales = {
-  ['CHECKING_SUBSCRIPTION']                       = "Welcome %s ! We are checking if you have any subscription active before joining.."
+  ['CHECKING_SUBSCRIPTION']                       = "Welcome %s ! We are checking if you have any subscription active before joining..",
   ['NO_SUBSCRIPTION']                             = "You are not having any subscription active, we would like for you to join our discord and contact us.",
   ['CONSOLE_USER_JOIN_ATTEMPT']                   = '^1A user with the identifier (%s) attempted to join while not having any subscription active.^0',
   ['CONSOLE_USER_EXPIRED_JOIN_ATTEMPT']           = "^1A user with the identifier (%s) attempted to join while the user's subscription has been expired.^0",
