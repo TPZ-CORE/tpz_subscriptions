@@ -26,3 +26,5 @@
 
 - The ace permission: `tpzcore.all` Gives permissioms to all commands and actions (FOR ALL OFFICIAL PUBLISHED FREE SCRIPTS).
 - The ace permission: `tpzcore.subscriptions.all` Gives permissions to all commands related ONLY for this script.
+
+**THE COMMANDS CAN BE ALSO EXECUTED THROUGH THE SERVER CONSOLE (TXADMIN)**
