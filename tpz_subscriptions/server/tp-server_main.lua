@@ -31,13 +31,15 @@ AddEventHandler('playerConnecting', function(name, setKickReason, defer)
 
     -- mandatory wait!
     Wait(0) 
+
+    defer.update(string.format(Locales['CHECKING_SUBSCRIPTION'], name))
+
     steamIdentifier = GetSteamID(_source)
     -- mandatory wait!
     Wait(0)
 
     local hasSubscription, expired, await = false, false, true
 
-    print(steamIdentifier)
     exports["ghmattimysql"]:execute("SELECT * FROM `subscriptions` WHERE `identifier` = @identifier", { ['identifier'] = steamIdentifier }, function(result)
 		
 		if result == nil or result and result[1] == nil then
