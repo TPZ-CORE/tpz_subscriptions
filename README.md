@@ -28,3 +28,8 @@
 - The ace permission: `tpzcore.subscriptions.all` Gives permissions to all commands related ONLY for this script.
 
 **THE COMMANDS CAN BE ALSO EXECUTED THROUGH THE SERVER CONSOLE (TXADMIN)**
+
+## Important Information
+
+- THE COMMANDS CAN BE ALSO EXECUTED THROUGH THE SERVER CONSOLE (TXADMIN).
+- DO NOT USE the [tpz_discord_whitelist](https://github.com/TPZ-CORE/tpz_discord_whitelist) if you are going to use this script! ONLY one of both.
