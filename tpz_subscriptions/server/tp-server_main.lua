@@ -57,7 +57,7 @@ AddEventHandler('playerConnecting', function(name, setKickReason, defer)
 
                 hasSubscription = true
 
-                if res.expiration_duration > 0 then
+                if res.expiration_date > 0 then
                     local date_string = os.date("%Y-%m-%d %H:%M:%S", res.expiration_date)
                     defer.update(string.format(Locales['SUBSCRIPTION_VALID_UNTIL'], date_string))
                     Wait(5000) -- mandatory wait for displaying the subscription validation text. 
