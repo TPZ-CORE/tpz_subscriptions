@@ -37,30 +37,34 @@ AddEventHandler('playerConnecting', function(name, setKickReason, defer)
 
     local hasSubscription, expired, await = false, false, true
 
-    exports["ghmattimysql"]:execute("SELECT * FROM `subscriptions` WHERE `identifier` = @identifier", { ['identifier'] = steamIdentifier }, function(result)
+    exports["ghmattimysql"]:execute("SELECT `expiration_date` FROM `subscriptions` WHERE `identifier` = @identifier", { ['identifier'] = steamIdentifier }, function(result)
 		
+        local res = result[1]
+
 		if result == nil or result and result[1] == nil then
             hasSubscription = false -- not added on the subscriptions.
-
             await = false
 
         else
 
 			local current_timestamp = os.time()
 
-			if result[1].expiration_date ~= 0 and current_timestamp > result[1].expiration_date then 
+			if res.expiration_date ~= 0 and current_timestamp > res.expiration_date then 
                 hasSubscription = false -- subscription has been expired.
                 expired = true
                 await   = false
             else
+
                 hasSubscription = true
 
-                if result[1].expiration_duration > 0 then
-                    local date_string = os.date("%Y-%m-%d %H:%M:%S", result[1].expiration_date)
+                if res.expiration_duration > 0 then
+                    local date_string = os.date("%Y-%m-%d %H:%M:%S", res.expiration_date)
                     defer.update(string.format(Locales['SUBSCRIPTION_VALID_UNTIL'], date_string))
                     Wait(5000) -- mandatory wait for displaying the subscription validation text. 
-                    await = false
                 end
+
+                await = false
+                
             end
 
         end
@@ -71,7 +75,6 @@ AddEventHandler('playerConnecting', function(name, setKickReason, defer)
     while await do
         Wait(500)
     end
-
 
     if ( not hasSubscription ) then
 
