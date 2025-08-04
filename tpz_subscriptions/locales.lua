@@ -39,4 +39,6 @@ Locales = {
   
   ['USER_SUBSCRIPTION_SET_NO_EXPIRATION_GAME']    = "The user subscription has no longer expiration date.",
   ['USER_SUBSCRIPTION_SET_NO_EXPIRATION_CONSOLE'] = "The user subscription has no longer expiration date.",
+
+  ['CHECKING_PRIORITY_POSITION']                  = "Your position in the queue is %s / %s players and currently waiting %s seconds.",
 }
