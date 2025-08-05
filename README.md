@@ -31,3 +31,4 @@
 
 - THE COMMANDS CAN BE ALSO EXECUTED THROUGH THE SERVER CONSOLE (TXADMIN).
 - DO NOT USE the [tpz_discord_whitelist](https://github.com/TPZ-CORE/tpz_discord_whitelist) if you are going to use this script! ONLY one of both.
+- We also provide you a queue priority system supported by steam hex identifiers or discord roles.  
