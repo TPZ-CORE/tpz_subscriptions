@@ -15,7 +15,8 @@ local GetSteamID = function(src)
     return sid
 end
 
-local function RemovePlayerFromQueue(_source)
+local function RemovePlayerFromQueue(source)
+    local _source = source
     local leavingPosition = Queue[_source] and Queue[_source].position
     Queue[_source] = nil
     
@@ -27,6 +28,28 @@ local function RemovePlayerFromQueue(_source)
             end
         end
     end
+end
+
+local function GetPlayerPriority(source, identifier)
+    local _source       = source
+    local priority      = Config.DefaultPriority
+    local discordRoles = TPZ.GetPlayer(_source).getDiscordRoles()
+
+    for _, playerRole in pairs (discordRoles) do
+
+        if Config.Priorities.DiscordRoles[tonumber(role)] then
+            priority = Config.Priorities.DiscordRoles[tonumber(role)]
+            break
+        end
+
+    end
+
+    -- Steam Hex overriding the discord role priority. 
+    if Config.Priorities.SteamIdentifiers[identifier] then
+        priority = Config.Priorities.SteamIdentifiers[identifier]
+    end
+
+    return priority
 end
 
 -----------------------------------------------------------
@@ -104,11 +127,7 @@ AddEventHandler('playerConnecting', function(name, setKickReason, defer)
     local insertPosition = 1
     local now = os.time()
 
-    local priority = Config.DefaultPriority
-
-    if Config.Priorities[steamIdentifier] then
-        priority = Config.Priorities[steamIdentifier]
-    end
+    local priority = GetPlayerPriority(_source, steamIdentifier)
 
     for _, user in pairs(Queue) do
         if priority > user.priority then
